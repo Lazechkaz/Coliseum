@@ -1,0 +1,808 @@
+@charset "UTF-8";
+/* Fonts family*/
+@font-face {
+  font-family: 'Nunito_reg';
+  src: url('../fonts/Nunito-Regular.eot');
+  src: url('../fonts/Nunito-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Nunito-Regular.woff2') format('woff2'), url('../fonts/Nunito-Regular.woff') format('woff'), url('../fonts/Nunito-Regular.ttf') format('truetype'), url('../fonts/Nunito-Regular.svg#Nunito-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Nunito_black';
+  src: url('../fonts/Nunito-Black.eot');
+  src: url('../fonts/Nunito-Black.eot?#iefix') format('embedded-opentype'), url('../fonts/Nunito-Black.woff2') format('woff2'), url('../fonts/Nunito-Black.woff') format('woff'), url('../fonts/Nunito-Black.ttf') format('truetype'), url('../fonts/Nunito-Black.svg#Nunito-Black') format('svg');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Nunito_light';
+  src: url('../fonts/Nunito-Light.eot');
+  src: url('../fonts/Nunito-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Nunito-Light.woff2') format('woff2'), url('../fonts/Nunito-Light.woff') format('woff'), url('../fonts/Nunito-Light.ttf') format('truetype'), url('../fonts/Nunito-Light.svg#Nunito-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Nunito_bold';
+  src: url('../fonts/Nunito-Bold.eot');
+  src: url('../fonts/Nunito-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Nunito-Bold.woff2') format('woff2'), url('../fonts/Nunito-Bold.woff') format('woff'), url('../fonts/Nunito-Bold.ttf') format('truetype'), url('../fonts/Nunito-Bold.svg#Nunito-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Nunito_semibold';
+  src: url('../fonts/Nunito-SemiBold.eot');
+  src: url('../fonts/Nunito-SemiBold.eot?#iefix') format('embedded-opentype'), url('../fonts/Nunito-SemiBold.woff2') format('woff2'), url('../fonts/Nunito-SemiBold.woff') format('woff'), url('../fonts/Nunito-SemiBold.ttf') format('truetype'), url('../fonts/Nunito-SemiBold.svg#Nunito-SemiBold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+/* Fonts */
+/* Colors */
+/* Basic setting */
+body, html {
+  font-size: 12px;
+  width: 100%;
+}
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+div{
+  box-sizing: border-box;
+}
+img{
+  max-width: 100%;
+}
+body {
+  font-family: 'Nunito_reg', sans-serif;
+}
+/* Навигационная панель */
+a,
+:before,
+:after {
+  transition: 0.2s;
+}
+section{
+  display: block;
+}
+.nav-item a {
+  position: relative;
+  color: #ffffff;
+  font-family: 'Nunito_reg', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 2.5px 15px;
+}
+.nav-item a:hover {
+  opacity: .7;
+}
+.nav-item a:before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  bottom: 1px;
+  width: 0%;
+  height: 1px;
+  background-color: #e7e7e7;
+}
+.nav-item a:hover:before {
+  width: 25%;
+}
+.toolbar{
+  position: fixed;
+  top: 0;   
+  left: 0;   
+  z-index: 9999;   
+  width: 100%;   
+  height: 50px;
+}
+.toolbar-phone {
+  text-align: center;
+}
+.toolbar-phone a {
+  display: block;
+}
+.toolbar-phone a:hover {
+  opacity: .7;
+}
+.phone {
+  display: block;
+  padding-bottom: 10px;
+}
+.phone-number {
+  display: block;
+  color: #ffffff !important;
+  font-family: 'Nunito_semibold', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+.call-back {
+  color: #e7e7e7 !important;
+  font-family: 'Nunito_reg', sans-serif;
+  line-height: 1.5px;
+  font-size: 12px;
+  font-weight: 100;
+  letter-spacing: 1.5px;
+  text-decoration: underline;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  padding-left: 20px;
+}
+.navbar-nav li {
+  padding-right: 15px;
+}
+.navbar-brand:hover {
+  opacity: .7;
+}
+.img-phone {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-bottom: 10px;
+  padding-right: 2px;
+}
+/* Конец кода nav панели */
+a:hover {
+  text-decoration: none;
+}
+button:focus,
+input:focus,
+a:focus {
+  outline: none;
+}
+
+/*---------------------Head---------------------*/
+.head{
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index: 9;
+  padding-top: 3.541vw;
+}
+.picture {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: url(../img/main-bg.jpg) 50%/cover;
+
+}
+
+.main-content {
+  /*Главный заголовок */
+  /*Подзаголовок */
+  /*Преимущества */
+}
+.main-content h1 {
+  font-family: 'Nunito_semibold', sans-serif;
+  color: #f48f17;
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: 100px;
+}
+.main-content h2 {
+  font-family: 'Nunito_semibold', sans-serif;
+  color: #ffffff;
+  font-size: 37px;
+  font-weight: 600;
+}
+.main-content .advantage {
+  font-family: 'Nunito_semibold', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 85px;
+  line-height: 2rem;
+  margin-bottom: 85px;
+}
+.main-content .advantage p {
+  margin-bottom: 10px;
+  /*Иконка звезды */
+}
+.main-content .advantage p .img-star {
+  display: inline-block;
+  margin: 0px 2px;
+  padding-bottom: 7px;
+  padding-left: 25px;
+}
+.main-button {
+  /*Стиль кнопок*/
+  width: 250px;
+  height: 60px;
+  display: inline-block;
+  transition: all 0.2s;
+}
+.take-number-btn {
+  /* Кнопка выбора номера */
+  border-radius: 5px;
+  border: 3px solid #f48f17;
+  background-color: #161d23;
+  /* Текст */
+  color: #f48f17;
+  font-family: 'Nunito_reg', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.take-number-btn:hover {
+  cursor: pointer;
+  background-color: #202a33;
+}
+/* Кнопка бронирования */
+.book-btn {
+  border-radius: 5px;
+  background-color: #f48f17;
+  /* Текст */
+  font-family: 'Nunito_reg', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #f8f8f8;
+}
+.pad-btn{
+	margin-right: 65px;
+}
+.book-btn:hover {
+  cursor: pointer;
+  background-color: #e7820b;
+}
+.arrow {
+  display: block;
+  text-align: right;
+  padding-top: 50px;
+}
+.arrow a {
+  font-size: 45px;
+  color: #D5D5D5;
+  transition: 0.2s;
+}
+.arrow a:hover {
+  color: #f48f17;
+}
+#head{
+ 
+}
+/*---------------------Head---------------------*/
+
+/* О гостинице */
+
+/* Текст "Что представляет собой Колизей" */
+.text-about {
+  background-color: #404040;
+  padding: 15px;
+  text-align: left;
+  border-radius: 10px;
+}
+.text-about .info-text {
+  font-family: 'Nunito_reg', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  text-align: left;
+  padding: 0 10px 10px 10px;
+}
+/* Оформление секции с преимуществами */
+.section-header h2 {
+  font-family: Nunito_bold;
+  text-align: center;
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #161d23;
+  margin-bottom: 50px;
+}
+.hr-line {
+  margin: 50px 0;
+  padding: 0;
+  height: 0;
+  border: none;
+  border-top: 1px solid #4F4F4F;
+  width: 100%;
+}
+.block{
+  text-align: center;
+}
+.block h3{
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-family: 'Nunito_semibold';
+  color: #161d23;
+}
+.block p{
+  font-family: 'Nunito_reg';
+  display: inline-block;
+  width: 70%;
+  font-size: 18px;
+  color: #161d23;
+}
+.block img{
+  height: 80px;
+  margin-bottom: 20px;
+  display: block;
+  margin: 0 auto;
+}
+.slick-active {
+  outline: none;
+}
+.arrow-slider {
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  z-index: 99;
+  width: 20px;
+  height: 20px;
+  border: none;
+}
+.prev{
+	left: 0;
+ background: url(../img/chevron-left-gray.svg) center no-repeat;
+ background-size: 70%;
+}
+.next{
+	right: 0;
+ background: url(../img/chevron-right-gray.svg) center no-repeat;
+ background-size: 70%;
+}
+.prev-img {
+  left: 0;
+  background: url(../img/chevron-left-solid.svg) center no-repeat;
+  background-size: 70%;
+}
+.next-img {
+  right: 0;
+  background: url(../img/chevron-right-solid.svg) center no-repeat;
+  background-size: 70%;
+}
+#about{
+  background: url(../img/about/about-bg.jpg) no-repeat center top / cover;
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+.slick-next {
+  right: 0;
+  background: url(../img/arrow-right-solid.svg) center no-repeat;
+  background-size: 80%;
+}
+/*---------------------О гостинице---------------------*/
+
+/*---------------------Номера---------------------*/
+.rooms-info h2{
+  font-family: 'Nunito_bold';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #161D23;
+  margin-bottom: 15px;
+}
+.rooms-info p{
+  font-family: Nunito_reg;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 26px;
+
+  color: #636060;
+}
+.rooms-icons {
+  margin-top: 15px;
+}
+.icons-hr{
+  border-right: thin solid #404040;
+  height: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 20px;
+}
+.room-stats {
+  margin-top: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.room-stats p{
+  font-family: Nunito_reg;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  color: #161D23;
+}
+.room-stats h3{
+  font-family: Nunito_reg;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 49px;
+  color: #161D23;
+}
+.square-room sup{
+	font-size: 20px;
+}
+.margin{
+  margin-right: 40px;
+  margin-left: 40px;
+}
+.room-button {
+  /*Стиль кнопок*/
+  width: 250px;
+  height: 60px;
+  display: inline-block;
+  transition: all 0.2s;
+  position: right;
+  margin-top: 15px;
+}
+#numbers .bg-gray-color{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #FAFAFA;
+}
+#numbers .bg-white-color{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #fff;
+}
+/*---------------------Номера---------------------*/
+
+/*---------------------Отзывы---------------------*/
+.marks{
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: row;
+}
+.review h2{
+	font-family: Nunito_reg;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 33px;
+	color: #161D23;
+}
+.marks h4{
+	font-family: Nunito_reg;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 25px;
+	color: #404040;
+}
+.review p{
+	font-family: Nunito_reg;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 25px;
+	color: #404040;
+}
+#reviews{
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background: url(../img/bg-rev.png) 50%/cover;
+}
+/*---------------------Отзывы---------------------*/
+
+/*---------------------Контакты---------------------*/
+#contact {
+	 padding-top: 100px;
+	 padding-bottom: 100px;
+		background: url(../img/contacts/bg-contact.png) 50% / cover;
+}
+
+.text-contact {
+	background-color: #404040;
+	border-radius: 10px;
+	padding: 20px;
+	& strong {
+		font-size: 20px;
+		font-weight: 600;
+		color: #ffffff;
+		font-family: Nunito_semibold;
+	}
+	& p {
+		padding-left: 30px;
+		font-size: 18px;
+		font-weight: 400;
+		font-family: Nunito_reg;
+		color: #ffffff;
+	}
+	& img {
+		padding-bottom: 5px;
+	}
+}
+/*---------------------Контакты---------------------*/
+
+/*---------------------Подвал---------------------*/
+#footer {
+	background-color: #2C241B;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.info-footer {
+	padding: 70px 0;
+	text-align: center;
+}
+.phone-link {
+	strong {
+		color: #ffffff;
+		font-family: Nunito_reg;
+		font-size: 18px;
+		font-weight: 400;
+		letter-spacing: 2.5px;
+		text-decoration: underline;
+	}
+	p {
+		font-family: Nunito_reg;
+		font-size: 12px;
+		color: #e7e7e7;
+		font-weight: 400;
+		letter-spacing: 2px;
+		text-decoration: underline;
+		line-height: 4.5px;
+	}
+}
+.phone-footer {
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
+
+.logo-footer {
+	padding: 25px 0;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+.contacts-link {
+	display: inline-block;
+	color: #fff;
+	&:hover {
+		color: darken(#f48f17, 10%);
+	}
+	font-size: 16px;
+	text-transform: uppercase;
+	font-family: Nunito_reg;
+}
+.mail-link {
+	strong {
+		color: #ffffff;
+		font-family: Nunito_reg;
+		font-size: 16px;
+		font-weight: 400;
+		text-transform: uppercase;
+		text-decoration: underline;
+		text-align: center;
+	}
+	p {
+		font-family: Nunito_reg;
+		font-size: 12px;
+		color: #e7e7e7;
+		font-weight: 400;
+		text-decoration: underline;
+		letter-spacing: 0,px;
+		line-height: 1.5px;
+		text-align: center;
+	}
+}
+.mail-footer {
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
+/*---------------------Подвал---------------------*/
+
+/*---------------------Бронь номера---------------------*/
+.modal {
+  padding-top: 150px;
+}
+.modal-content{
+	background-color: #404040;
+}
+.modal-header h5{
+ font-family: Nunito_bold;
+ font-size: 20px;
+ font-weight: 600;
+ color: #f48f17;
+}
+.modal-body {
+	label{
+		font-family: Nunito_reg;
+	 font-size: 16px;
+	 color: #fff;
+	}
+ input, select{
+		font-family: Nunito_reg;
+		font-size: 14px;
+	 color: #161d23;
+	}
+}
+.book-btn-mod{
+	background-color: #f48f17;
+  /* Текст */
+  font-family: 'Nunito_reg', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #f8f8f8;
+  width: 100%;
+}
+.book-btn-mod:hover {
+  cursor: pointer;
+  background-color: #e7820b;
+}
+.close{
+	color: #FAFAFA;
+}
+.close:hover {
+	color: darken(#FAFAFA, 10%);
+}
+/*---------------------Бронь номера---------------------*/
+@media only screen and (min-device-width: 320px) and (max-device-height: 670px) {
+	.main-title h1{
+		font-size: 20px;
+		text-align: center;
+	}
+	.main-title h2{
+		font-size: 22px;
+		text-align: center;
+	}
+	.main-content .advantage{
+		margin-top: 20px;
+		margin-bottom: 20px;
+		font-size: 15px;
+	}
+	.main-button{
+		height: 50px
+	}
+	.icons-hr{
+		margin-right: 5px;
+		margin-left: 5px;
+	}
+		.room-stats p{
+		font-size: 11px;
+	}
+	.room-stats h3{
+		font-size: 28px;
+	}
+}
+
+@media (max-width: 575.98px) {
+	.main-title h1{
+		font-size: 20px;
+		text-align: center;
+	}
+	.main-title h2{
+		font-size: 22px;
+		text-align: center;
+	}
+	.head_panel button{
+		width: 100%;
+		margin-top: 15px;
+	}
+	.main-content .advantage p .img-star{
+		padding-left: 0px;
+	}
+}
+
+// Малые девайсы («ландшафтные», < 768px)
+@media (max-width: 767.98px) {
+	.arrow{
+		display: none;
+	}
+}
+
+// Средние девайсы («таблетки», < 992px) 
+@media (max-width: 991.99px) {
+	.main-title h1{
+		font-size: 28px;
+	}
+	.main-title h2{
+		font-size: 30px;
+	}
+	.main-button{
+		text-align: center;
+		margin-right: 10px;
+		width: 240px;
+	}
+ .img-slider {
+   padding-top: 0;
+ }
+ .text-contact{
+ 	margin-bottom:25px;
+ }
+}
+
+// Большие девайсы (большие десктопы, < 1200px)
+@media (max-width: 1199px) { 
+	.text-about .info-text,{
+		font-size: 20px;
+	}
+	.text-about{
+		margin-top: 25px;
+	}
+	.rooms-info .room-info{
+		font-size: 20px;
+	}
+	.rooms-info h2{
+		margin-top: 25px;
+		font-size: 28px;
+		text-align: left;
+	}
+	.room-stats{
+		text-align: left;
+		display: flex;
+		justify-content: flex-start;
+	}
+	.room-button{
+		margin-top: 35px;
+	}
+	.rooms-icons img{
+		height: 30px;
+		width: 30px;
+	}
+}
+
+@media (min-width: 992px) {
+	.main-button{
+		margin-right: 65px;
+	}
+}
+@media (min-width: 1600px) {
+	.main-content h1{
+		font-size: 40px;
+	}
+	h2{
+		font-size: 45px;
+	}
+	p{
+		font-size: 25px;
+	}
+	.modal-header{
+		font-size: 25px;
+	}
+	.modal-body{
+		label {
+			font-size: 20px;
+		}
+		input, select{
+			font-size: 18px;
+		}
+	}
+	.book-btn-mod{
+		font-size: 18px;
+	}
+}
+@media screen and (max-height: 745px){
+	.arrow{
+		display: none;
+	}
+}
+@media screen and (min-height: 874px){
+  .main-content h1{
+  	margin-top: 150px;
+  }
+  #footer{
+  	padding-bottom: 160px;
+  	padding-top: 160px;
+  }
+}
+@media screen and (min-height: 950px){
+  .main-content h1{
+  	margin-top: 200px;
+  }
+}
